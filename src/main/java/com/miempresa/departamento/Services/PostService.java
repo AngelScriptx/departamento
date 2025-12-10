@@ -20,7 +20,10 @@ public class PostService {
     private final PostRepository postRepository;
     private final UsuarioRepository usuarioRepository;
 
-
+    
+    public Post guardarAsignaciones( PostCreateDTO post ) {
+        return postRepository.save(post);
+    }
     public PostGetDTO crearPostContrato(PostCreateDTO post) {
         
         Post postNuevo = new Post();
